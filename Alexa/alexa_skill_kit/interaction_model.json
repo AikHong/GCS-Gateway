@@ -1,0 +1,76 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "g. c. s. gateway",
+            "intents": [
+                {
+                    "name": "PowerStateIntent",
+                    "slots": [
+                        {
+                            "name": "PowerState",
+                            "type": "LIST_OF_POWER_STATES"
+                        }
+                    ],
+                    "samples": [
+                        "turn {PowerState} office light",
+                        "turn {PowerState} the lights",
+                        "turn office lights {PowerState}",
+                        "turn the lights {PowerState}"
+                    ]
+                },
+                {
+                    "name": "BrightnessIntent",
+                    "slots": [
+                        {
+                            "name": "Brightness",
+                            "type": "AMAZON.NUMBER"
+                        }
+                    ],
+                    "samples": [
+                        "set office to {Brightness} percent",
+                        "set the lights to {Brightness} percent",
+                        "set office to {Brightness}",
+                        "set the office lights to {Brightness}",
+                        "dim my office to {Brightness} percent",
+                        "dim the lights to {Brightness} percent",
+                        "dim my office to {Brightness}",
+                        "dim the office lights to {Brightness}"
+                    ]
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                }
+            ],
+            "types": [
+                {
+                    "name": "LIST_OF_POWER_STATES",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "OFF"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "ON"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}
